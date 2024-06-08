@@ -1,0 +1,13 @@
+.qqq{
+    transition: all 0.2s linear;
+}
+.qqq:hover{ transform: scale(0.8);
+    transition: all 0.2s linear;
+}
+p{
+    color: #054089;
+}
+
+h4{
+    color: #727272;
+}

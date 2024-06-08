@@ -4,6 +4,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Toaster } from 'react-hot-toast';
 
 import AppLayout from './ui/AppLayout';
+import ProtectedRoute from './ui/ProtectedRoute';
 import LandingStatic from './pages/open/pages/LandingStatic_xx';
 import Landing from './pages/open/pages/Landing_xx';
 import GlobalStyles from './styles/GlobalStyles';
@@ -16,8 +17,8 @@ import {
   Bookings_xx,
   Cabins_xx,
   Dashboard_xx,
-  // Login_xx,
-  // PageNotFound_xx,
+  Login_xx,
+  PageNotFound_xx,
   Settings_xx,
   NewUsers_xx,
 } from './pages';
@@ -31,35 +32,36 @@ const queryClient = new QueryClient({
 });
 
 const router = createBrowserRouter([
+  // {
+  //   path: '/',
+  //   element: <Landing />,
+  // },
+  
+
+  // {
+  //   path: '/dashboard',
+  //   element: <Dashboard_xx />,
+  // },
   {
-    path: '/',
-    element: <Landing />,
+    path: '/login',
+    element: <Login_xx />,
   },
   {
     path: '/landing',
     element: <Landing />,
   },
-
-  {
-    path: '/dashboard',
-    element: <Dashboard_xx />,
-  },
-  // {
-  //   path: '/login',
-  //   element: <Login_xx />,
-  // },
   {
     path: '/',
-    element: <AppLayout />,
+    element:<ProtectedRoute><AppLayout /></ProtectedRoute> ,
     children: [
       {
         index: true,
         element: <Dashboard_xx />,
       },
-
+      
       {
-        path: 'bookings',
-        element: <Bookings_xx />,
+        path: 'dashboard',
+        element: <Dashboard_xx />,
       },
       {
         path: 'bookings/:bookingId',
@@ -110,6 +112,7 @@ const App_xx = () => {
           },
         }}
       />
+
       <ReactQueryDevtools initialIsOpen={true} />
     </QueryClientProvider>
   );
