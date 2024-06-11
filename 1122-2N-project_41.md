@@ -24,9 +24,15 @@
 
 路由 主頁 登入 登出
 
+![555.png](./555.png)
+
+![666.png](./666.png)
+
+![777.png](./777.png)
+
 #### => featured category, pages with routes
 
-之後預計做點選可以查看此食物細節
+之後預計做點選可以查看此食物細節(已完成)
 
 ### 重點 3 -- Supabase 後台 schemas and data 支援
 
@@ -80,6 +86,10 @@ https://www.free-css.com/free-css-templates/page293/giftos
 ## 前端程式設計說明
 
 ### => 功能 1 ，畫面設計，完成度說明
+
+![888.png](./888.png)
+
+點擊食物圖片,可出現食物材料 作法
 
 ### => 功能 2 及畫面設計，完成度說明
 
