@@ -1,19 +1,18 @@
-import CabinTable from '../features/cabins/CabinTable';
-import Heading from '../ui/Heading';
-import Row from '../ui/Row';
+// CabinsList.js
 
-const Cabins_xx = () => {
+import React from 'react';
+
+const CabinsList = ({ cabins }) => {
   return (
-    <>
-      <Row type='horizontal'>
-        <Heading as='h1'>All cabins</Heading>
-        <p>Filter / Sort</p>
-      </Row>
-      <Row>
-        <CabinTable />
-      </Row>
-    </>
+    <ul>
+      {cabins.map((cabin) => (
+        <li key={cabin.id}>
+          <div>{cabin.name}</div>
+          <div>{cabin.salty}</div>
+        </li>
+      ))}
+    </ul>
   );
 };
 
-export default Cabins_xx;
+export default CabinsList;

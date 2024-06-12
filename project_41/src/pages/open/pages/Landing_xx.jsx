@@ -13,7 +13,7 @@ function Landing_xx(props) {
             <div className='flex justify-between items-center max-w-7xl mx-auto'>
               <Link className='flex items-center gap-4 z-10' to='/'>
                 <img width='48px' height='36px' src='/logo.webp' />
-                <span>The Wild Oasis (211410302)</span>
+                <span>The Wild Oasis (211410641)</span>
               </Link>
               <nav className='z-10 text-xl'>
                 <ul className='flex gap-16 items-center'>
