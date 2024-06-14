@@ -1,6 +1,6 @@
 [Final Project -- Github URL](https://github.com/100peggy/1122-wp2-2N_41/tree/main/demo)
 
-[Final Project -- Vercel URL]()
+[Final Project -- Vercel URL](https://vercel.com/100peggys-projects/project)
 
 ## 評分說明
 
@@ -92,6 +92,8 @@ https://www.free-css.com/free-css-templates/page293/giftos
 點擊食物圖片,可出現食物材料 作法
 
 ### => 功能 2 及畫面設計，完成度說明
+
+![999.png](./999.PNG)
 
 ### => 功能 3 及畫面設計，完成度說明
 
