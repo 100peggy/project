@@ -10,6 +10,9 @@ const Dashboard_xx = () => {
 
   const [listVisible, setListVisible] = useState([]);
 
+  const [selected, setSelected] = useState('all');
+  console.log('Home selected', selected);
+
   const toggleList = (index) => {
     const newListVisible = [...listVisible];
     newListVisible[index] = !newListVisible[index];
@@ -89,12 +92,15 @@ const Dashboard_xx = () => {
 
       <section className='shop_section layout_padding'>
         <div className='container'>
-          <div class='flex justify-between'>
+          <div class='flex justify-center'>
+          <div className='btn-box  m-8'>
+              <a href='#' onClick={() => setSelected('all')}> all </a>
+            </div>{' '}
             <div className='btn-box  m-8'>
-              <a href=''> salty </a>
+              <a href='#' onClick={() => setSelected('salty')}> salty </a>
             </div>{' '}
             <div className='btn-box m-8'>
-              <a href=''> sweet </a>
+              <a href='#'  onClick={() => setSelected('sweet')}> sweet </a>
             </div>
           </div>
 
@@ -102,7 +108,7 @@ const Dashboard_xx = () => {
             <h2>Latest Products</h2>
           </div>
           <div className='row'>
-            {make?.map((data, index) => {
+            {make?.filter(data => selected === 'all' || data.flavor === selected).map((data, index) => {
               const { id, img, name, steps, Ingredients } = data;
               return (
                 <div className='col-sm-6 col-md-4 col-lg-3'>
